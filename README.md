@@ -70,8 +70,3 @@ dinogame/
 ├── main.cpp           # Main source code file
 └── .gitignore         # Files ignored by Git (e.g., build/ folder)
 ```
-
----
-
-## 📝 License
-This project is licensed under the MIT License. Feel free to use, study, and modify the code.
