@@ -17,6 +17,22 @@ inline void DrawRectanglePos(Vector2 pos, int width, int height, Color color) {
     DrawRectangle(pos.x, pos.y, width, height, color);
 }
 
+class dinoobj {
+public:
+    const int x = 10;
+    const int y = 640;
+    const int width = 40;
+    const int height = 60;
+    
+    void draw(bool night) {
+        if (night)
+            DrawRectangle(this->x, this->y, this->width, this->height, WHITE);
+        else 
+            DrawRectangle(this->x, this->y, this->width, this->height, BLACK);
+    }
+
+};
+
 int main() {
     int fd = open("/dev/null", O_WRONLY);
     dup2(fd, 1);
@@ -29,6 +45,8 @@ int main() {
     InitWindow(WINDOWWIDTH, WINDOWHEIGHT, "Dino");
 
     SetTargetFPS(FPS);
+
+    dinoobj dino; 
 
     while (!WindowShouldClose()) {
 
@@ -47,8 +65,8 @@ int main() {
         if (night) {
             ClearBackground(BLACK);
             DrawRectanglePos(GroundStartPos, WINDOWWIDTH, 5, WHITE);
-            
         }
+        dino.draw(night);
         EndDrawing();
     }
 
