@@ -34,7 +34,7 @@ Follow these steps in your terminal to clone, compile, and run the game:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com
+git clone https://github.com/goncas200/dinogame.git
 cd dinogame
 ```
 
